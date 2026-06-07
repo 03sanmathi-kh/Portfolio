@@ -3,21 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflections</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  background: #f0f4ff;
-  font-family: sans-serif;
+  background: linear-gradient(135deg, #e8eaf6 0%, #ede7f6 100%);
+  font-family: 'Outfit', sans-serif;
   padding: 2rem;
+  min-height: 100vh;
 }
 .card {
-  background: white;
-  border-radius: 16px;
+  background: linear-gradient(160deg, #f3f0ff 0%, #e8f0fe 60%, #f0f4ff 100%);
+  border-radius: 20px;
   padding: 2.5rem;
   max-width: 900px;
   margin: 0 auto;
-  border: 1px solid #dce8fb;
-  box-shadow: 0 4px 24px rgba(107,155,250,0.1);
+  border: 1px solid rgba(107,155,250,0.3);
+  box-shadow: 0 8px 32px rgba(107,155,250,0.2), 0 2px 8px rgba(91,91,214,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(107,155,250,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(91,91,214,0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 .card-header {
   display: flex;
@@ -25,18 +46,19 @@ body {
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #dce8fb;
+  border-bottom: 2px solid rgba(107,155,250,0.3);
 }
 .icon {
   background: linear-gradient(135deg, #4f6ef7, #5b5bd6);
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(79,110,247,0.4);
 }
 .card-header h2 {
   color: #1a3ab8;
@@ -64,8 +86,9 @@ body {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background: #6b9bfa;
+  background: linear-gradient(135deg, #4f6ef7, #5b5bd6);
   border-radius: 50%;
+  box-shadow: 0 0 6px rgba(79,110,247,0.5);
 }
 .para {
   color: #333;
@@ -73,7 +96,7 @@ body {
   line-height: 1.9;
   margin-bottom: 0.5rem;
   padding-left: 1rem;
-  border-left: 3px solid #dce8fb;
+  border-left: 3px solid rgba(107,155,250,0.4);
 }
 .tags {
   display: flex;
@@ -81,15 +104,16 @@ body {
   gap: 0.5rem;
   margin-top: 1.5rem;
   padding-top: 1.2rem;
-  border-top: 1px solid #dce8fb;
+  border-top: 1px solid rgba(107,155,250,0.25);
 }
 .tag {
-  background: #dce8fb;
+  background: linear-gradient(135deg, rgba(79,110,247,0.12), rgba(91,91,214,0.12));
   color: #1a3ab8;
   font-size: 0.75rem;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 20px;
   font-weight: 500;
+  border: 1px solid rgba(107,155,250,0.3);
 }
 .footnote {
   text-align: center;
