@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #f0f4ff;
+  font-family: sans-serif;
+  padding: 2rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.photo-side img {
+  width: 100%;
+  max-width: 380px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.photo-placeholder {
+  width: 100%;
+  max-width: 380px;
+  height: 380px;
+  background: #dce8fb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b9bfa;
+  font-size: 0.9rem;
+  border: 2px dashed #6b9bfa;
+}
+.text-side {
+  background: #f0f4ff;
+  padding: 1.5rem;
+  border-left: 4px solid #6b9bfa;
+  border-radius: 0 8px 8px 0;
+}
+.text-side h2 {
+  color: #1a3ab8;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.underline {
+  width: 50px;
+  height: 3px;
+  background: #6b9bfa;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+.tags {
+  color: #4a7bea;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+.text-side p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.footnote {
+  text-align: center;
+  color: #1a3ab8;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b8d0f5;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="photo-side">
+    <!-- Replace the placeholder below with your photo:
+         <img src="photo.jpg" alt="Sanmathi Hegde"> -->
+    <div class="photo-placeholder"></div>
+  </div>
+  <div class="text-side">
+    <h2>About Me</h2>
+    <div class="underline"></div>
+    <p class="tags">Student | Web Developer | Tech Enthusiast</p>
+    <p>I'm Sanmathi Hegde, a Computer Science Engineering undergraduate at KLE Technological University, Hubballi. I am passionate about web development, software engineering, and building innovative digital solutions using modern technologies.</p>
+  </div>
+</div>
+
+<div class="footnote">
+  Sanmathi Hegde &nbsp;|&nbsp; 01fe24bcs269@kletech.ac.in
+</div>
+
+</body>
+</html>
