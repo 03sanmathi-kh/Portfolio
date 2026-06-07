@@ -18,25 +18,17 @@ body {
   margin: 0 auto;
   gap: 2rem;
 }
+.photo-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .photo-side img {
   width: 100%;
   max-width: 380px;
   height: 380px;
   object-fit: cover;
   border-radius: 8px;
-}
-.photo-placeholder {
-  width: 100%;
-  max-width: 380px;
-  height: 380px;
-  background: #dce8fb;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b9bfa;
-  font-size: 0.9rem;
-  border: 2px dashed #6b9bfa;
 }
 .text-side {
   background: #f0f4ff;
@@ -71,7 +63,6 @@ body {
   text-align: center;
   color: #1a3ab8;
   font-size: 0.85rem;
-  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #b8d0f5;
   max-width: 900px;
@@ -83,9 +74,7 @@ body {
 
 <div class="container">
   <div class="photo-side">
-    
-         <img src="photo.jpeg" alt="Sanmathi Hegde"> 
-    <div class="photo-placeholder"></div>
+    <img src="photo.jpeg" alt="Sanmathi Hegde">
   </div>
   <div class="text-side">
     <h2>About Me</h2>
