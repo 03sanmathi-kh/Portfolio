@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   background: #f0f4ff;
-  font-family: sans-serif;
+  font-family: 'Outfit', sans-serif;
   padding: 2rem;
 }
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  max-width: 900px;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: start;
+  max-width: 950px;
   margin: 0 auto;
   gap: 2rem;
 }
@@ -25,16 +26,19 @@ body {
 }
 .photo-side img {
   width: 100%;
-  max-width: 380px;
-  height: 380px;
+  max-width: 340px;
+  height: 400px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(107,155,250,0.25);
+  border: 3px solid #6b9bfa;
 }
 .text-side {
-  background: #f0f4ff;
-  padding: 1.5rem;
-  border-left: 4px solid #6b9bfa;
-  border-radius: 0 8px 8px 0;
+  background: linear-gradient(160deg, #f3f0ff 0%, #e8f0fe 100%);
+  padding: 2rem;
+  border-left: 4px solid #4f6ef7;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 4px 20px rgba(107,155,250,0.15);
 }
 .text-side h2 {
   color: #1a3ab8;
@@ -45,19 +49,104 @@ body {
 .underline {
   width: 50px;
   height: 3px;
-  background: #6b9bfa;
-  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4f6ef7, #6b9bfa);
+  margin-bottom: 0.8rem;
   border-radius: 2px;
 }
-.tags {
+.role-tags {
   color: #4a7bea;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
-.text-side p {
-  color: #333;
-  font-size: 0.95rem;
+
+/* Section blocks */
+.info-block {
+  margin-bottom: 1.2rem;
+}
+.info-block h4 {
+  color: #1a3ab8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.info-block h4::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4f6ef7;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(79,110,247,0.5);
+}
+.info-block p {
+  color: #334;
+  font-size: 0.9rem;
   line-height: 1.8;
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(107,155,250,0.4);
+}
+
+/* Skill pills */
+.skill-group {
+  margin-bottom: 1.2rem;
+}
+.skill-group h4 {
+  color: #1a3ab8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.skill-group h4::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4f6ef7;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(79,110,247,0.5);
+}
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-left: 0.8rem;
+}
+.pill {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.pill.frontend {
+  background: rgba(79,110,247,0.1);
+  color: #1a3ab8;
+  border-color: rgba(79,110,247,0.3);
+}
+.pill.backend {
+  background: rgba(91,91,214,0.1);
+  color: #3730a3;
+  border-color: rgba(91,91,214,0.3);
+}
+.pill.database {
+  background: rgba(107,155,250,0.15);
+  color: #1e40af;
+  border-color: rgba(107,155,250,0.4);
+}
+.divider {
+  height: 1px;
+  background: rgba(107,155,250,0.25);
+  margin: 1rem 0;
 }
 .footnote {
   text-align: center;
@@ -65,7 +154,7 @@ body {
   font-size: 0.85rem;
   padding-top: 1rem;
   border-top: 1px solid #b8d0f5;
-  max-width: 900px;
+  max-width: 950px;
   margin: 2rem auto 0;
 }
 </style>
@@ -76,11 +165,53 @@ body {
   <div class="photo-side">
     <img src="photo.jpeg" alt="Sanmathi Hegde">
   </div>
+
   <div class="text-side">
     <h2>About Me</h2>
     <div class="underline"></div>
-    <p class="tags">Student | Web Developer | Tech Enthusiast</p>
-    <p>I'm Sanmathi Hegde, a Computer Science Engineering undergraduate at KLE Technological University, Hubballi. I am passionate about web development, software engineering, and building innovative digital solutions using modern technologies.</p>
+    <p class="role-tags">Student &nbsp;|&nbsp; Web Developer &nbsp;|&nbsp; Tech Enthusiast</p>
+
+    <div class="info-block">
+      <h4>Academic Background</h4>
+      <p>I'm Sanmathi Hegde, a Computer Science Engineering undergraduate at KLE Technological University, Hubballi, currently in my 4th Semester. I have been consistently building my knowledge in both theoretical and practical aspects of computer science.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info-block">
+      <h4>Passion & Interests</h4>
+      <p>I am deeply passionate about Web Development and Software Engineering. I enjoy crafting intuitive user interfaces and building robust backend systems. I love exploring new technologies and solving real-world problems through code.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="skill-group">
+      <h4>Skills Overview</h4>
+      <div style="margin-bottom:0.5rem; padding-left:0.8rem;">
+        <p style="font-size:0.78rem; color:#4f6ef7; font-weight:600; margin-bottom:0.3rem; border:none; padding:0;">Frontend</p>
+        <div class="pills">
+          <span class="pill frontend">HTML</span>
+          <span class="pill frontend">CSS</span>
+          <span class="pill frontend">JavaScript</span>
+          <span class="pill frontend">React</span>
+        </div>
+      </div>
+      <div style="margin-bottom:0.5rem; padding-left:0.8rem; margin-top:0.5rem;">
+        <p style="font-size:0.78rem; color:#3730a3; font-weight:600; margin-bottom:0.3rem; border:none; padding:0;">Backend</p>
+        <div class="pills">
+          <span class="pill backend">Node.js</span>
+          <span class="pill backend">Express.js</span>
+        </div>
+      </div>
+      <div style="padding-left:0.8rem; margin-top:0.5rem;">
+        <p style="font-size:0.78rem; color:#1e40af; font-weight:600; margin-bottom:0.3rem; border:none; padding:0;">Database</p>
+        <div class="pills">
+          <span class="pill database">MongoDB</span>
+          <span class="pill database">MySQL</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
