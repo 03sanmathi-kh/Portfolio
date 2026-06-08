@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #f0f4ff;
+  font-family: 'Outfit', sans-serif;
+  padding: 2rem;
+}
+.card {
+  background: linear-gradient(160deg, #f3f0ff 0%, #e8f0fe 60%, #f0f4ff 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 950px;
+  margin: 0 auto;
+  border: 1px solid rgba(107,155,250,0.3);
+  box-shadow: 0 8px 32px rgba(107,155,250,0.2);
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(107,155,250,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(107,155,250,0.3);
+}
+.icon {
+  background: linear-gradient(135deg, #4f6ef7, #5b5bd6);
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 4px 12px rgba(79,110,247,0.4);
+}
+.card-header h2 {
+  color: #1a3ab8;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.card-header p {
+  color: #6b9bfa;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.category {
+  margin-bottom: 2rem;
+}
+.category-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1a3ab8;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.category-title::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4f6ef7;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(79,110,247,0.5);
+}
+.category-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(107,155,250,0.3);
+}
+.skill {
+  margin-bottom: 1rem;
+}
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+.skill-name {
+  font-size: 0.88rem;
+  color: #334;
+  font-weight: 500;
+}
+.level {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+.level.intermediate {
+  background: rgba(79,110,247,0.12);
+  color: #1a3ab8;
+  border: 1px solid rgba(79,110,247,0.3);
+}
+.level.beginner {
+  background: rgba(107,155,250,0.12);
+  color: #3b5fc0;
+  border: 1px solid rgba(107,155,250,0.3);
+}
+.bar-bg {
+  background: rgba(107,155,250,0.15);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4f6ef7, #6b9bfa);
+}
+.bar-fill.beginner-bar {
+  background: linear-gradient(90deg, #6b9bfa, #93c5fd);
+}
+.divider {
+  height: 1px;
+  background: rgba(107,155,250,0.2);
+  margin: 0.5rem 0 1.5rem;
+}
+.footnote {
+  text-align: center;
+  color: #1a3ab8;
+  font-size: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b8d0f5;
+  max-width: 950px;
+  margin: 2rem auto 0;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <div class="icon">SK</div>
+    <div>
+      <h2>Skills</h2>
+      <p>Languages · Frameworks · Tools</p>
+    </div>
+  </div>
+
+  <!-- LANGUAGES -->
+  <div class="category">
+    <div class="category-title">Languages</div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">C</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">C++</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Java</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:65%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Python</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">JavaScript</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:65%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">SQL</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FRONTEND -->
+  <div class="category">
+    <div class="category-title">Frontend</div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">HTML</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:70%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">CSS</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:65%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">React</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Bootstrap</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BACKEND & FRAMEWORKS -->
+  <div class="category">
+    <div class="category-title">Backend & Frameworks</div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Node.js</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Express.js</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:58%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Spring Boot</span>
+        <span class="level beginner">Beginner</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill beginner-bar" style="width:30%"></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DATABASES -->
+  <div class="category">
+    <div class="category-title">Databases</div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">MongoDB</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">MySQL</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TOOLS -->
+  <div class="category">
+    <div class="category-title">Tools</div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Git & GitHub</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">VS Code</span>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" style="width:65%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Postman</span>
+        <span class="level beginner">Beginner</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill beginner-bar" style="width:35%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Docker</span>
+        <span class="level beginner">Beginner</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill beginner-bar" style="width:25%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-top">
+        <span class="skill-name">Firebase</span>
+        <span class="level beginner">Beginner</span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill beginner-bar" style="width:30%"></div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footnote">
+  Sanmathi Hegde &nbsp;|&nbsp; 01fe24bcs269@kletech.ac.in
+</div>
+
+</body>
+</html>
